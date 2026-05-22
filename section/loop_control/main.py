@@ -5,9 +5,14 @@ countries = ['Wales', 'Denmark', 'Belgium', 'Japan', 'South Korea', 'South Afric
 selected = []
 i = 0 
 while i < len(countries):
-    if countries[i][0] == 'S':
-        selected.append(countries[i])
+    if countries[i][0] != 'S':
         i += 1
+        continue
+    else:
+        selected.append(countries[i])
+    if len(selected) == 3:
+        break
+    i += 1
 
 
 
